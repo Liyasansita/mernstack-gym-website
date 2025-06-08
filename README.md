@@ -1,7 +1,9 @@
-![Screenshot (351)](https://github.com/user-attachments/assets/0fcf0fd7-e1f3-4cab-ae0d-c205246d538e)
-![Screenshot (352)](https://github.com/user-attachments/assets/be22aa44-b0f0-466a-a6d3-fce010aac80b)
-![Screenshot (354)](https://github.com/user-attachments/assets/aa9f201c-12cd-4077-981e-1b4153bae105)
-![Screenshot (355)](https://github.com/user-attachments/assets/0e8c0e37-abcb-4044-9c6d-e56946b9b972)
+![Screenshot (370)](https://github.com/user-attachments/assets/cde6b46f-71bd-4c52-8fdc-d6cb6a3840d8)
+![Screenshot (371)](https://github.com/user-attachments/assets/4794fd2b-df3f-4c35-b12e-ba6865921ae3)
+![Screenshot (372)](https://github.com/user-attachments/assets/a435b1b8-61cc-410f-8216-338d41123648)
+![Screenshot (373)](https://github.com/user-attachments/assets/5de0b682-b4bc-4aff-abf1-397d4d5b1c6f)
+![Screenshot (374)](https://github.com/user-attachments/assets/73fd816e-367c-43be-abd5-f8ca2cef40f5)
+
 
 feautres include:
 BMI Calculator
