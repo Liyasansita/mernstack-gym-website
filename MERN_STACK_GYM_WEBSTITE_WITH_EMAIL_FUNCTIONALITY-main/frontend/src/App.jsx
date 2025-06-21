@@ -6,10 +6,12 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import WorkoutSessions from "./components/WorkoutSessions";
-import Gallery from "./components/Gallery";
-import Pricing from "./components/Pricing";
 import Contact from "./components/Contact";
 import BMICalculator from "./components/BMICalculator";
+import BodyFatCalculator from "./components/BodyFatCalculator";
+import CalorieDeficitSurplusCalculator from "./components/CalorieDeficitSurplusCalculator";
+import Gallery from "./components/Gallery";
+import Pricing from "./components/Pricing";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -22,6 +24,8 @@ const App = () => {
       <Pricing />
       <Contact />
       <BMICalculator />
+      <BodyFatCalculator />
+      <CalorieDeficitSurplusCalculator/>
       <Footer />
       <ToastContainer theme="dark" position="top-center" />
     </Router>
