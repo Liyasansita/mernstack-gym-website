@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+/* Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -17,25 +18,27 @@
   --accent-color: #FFE66D;
 }
 
+/* Header */
 header {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   border: 2px solid var(--light-color);
-  padding: 8px 12px;
-  margin-top: 45px;
-  margin-left: 7rem;
+  padding: 6px 10px;
+  margin-top: 25px;
+  margin-left: 1.5rem;
   background-color: rgba(41, 47, 54, 0.7);
 }
 header p {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 1px;
-  word-spacing: 5px;
+  word-spacing: 3px;
   color: var(--light-color);
 }
 
+/* Hero Section */
 .hero {
   min-height: 100vh;
   position: relative;
@@ -46,25 +49,24 @@ header p {
   background-position: center;
   display: flex;
   align-items: center;
-  padding: 150px 0 70px 0;
-  padding-left: 7rem;
+  padding: 100px 1.5rem 50px;
 }
 .hero .content {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  max-width: 600px;
+  gap: 20px;
+  max-width: 100%;
 }
 .hero .content .title {
   color: var(--light-color);
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 1.2;
 }
 .hero .content .sub-title p {
   font-weight: 400;
   color: var(--light-color);
-  font-size: 1.8rem;
+  font-size: 1.1rem;
   line-height: 1.5;
 }
 .hero .content .sub-title p:last-child {
@@ -72,58 +74,61 @@ header p {
 }
 .hero .content .buttons {
   display: flex;
-  align-items: center;
-  gap: 25px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
 }
 .hero .content .buttons button {
-  padding: 15px 30px;
-  font-size: 1.2rem;
+  padding: 12px 25px;
+  font-size: 1rem;
   color: var(--secondary-color);
   border: 1px solid var(--secondary-color);
   background: transparent;
   transition: 0.3s;
   border-radius: 4px;
   cursor: pointer;
+  width: 100%;
+  max-width: 200px;
 }
 .hero .content .buttons button:hover {
   background: var(--secondary-color);
   color: var(--dark-color);
 }
 
+/* Workout Session */
 .workout_session {
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 100px 20px;
-  gap: 50px;
+  flex-direction: column;
+  padding: 50px 1.5rem;
+  gap: 30px;
   background-color: var(--light-color);
 }
 .workout_session .wrapper {
-  flex: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 .workout_session .wrapper h1 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   color: var(--dark-color);
   font-family: "Montserrat", sans-serif;
 }
 .workout_session .wrapper p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #666;
   line-height: 1.6;
 }
 .workout_session .wrapper .bootcamps {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 .workout_session .wrapper .bootcamps div {
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 20px;
+  padding: 15px;
   transition: all 0.3s ease;
   background-color: white;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -134,36 +139,37 @@ header p {
   background: var(--dark-color);
 }
 .workout_session .wrapper .bootcamps div h4 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin-bottom: 10px;
   color: var(--primary-color);
 }
 .workout_session .wrapper .bootcamps div p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   transition: color 0.3s;
 }
 
+/* Gallery */
 .gallery {
   background: var(--dark-color);
-  padding: 80px 20px;
+  padding: 50px 1.5rem;
 }
 .gallery h1 {
   color: var(--accent-color);
-  font-size: 2.2rem;
-  margin-bottom: 40px;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
 .gallery .images {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 15px;
+  grid-template-columns: 1fr;
+  gap: 10px;
   max-width: 1500px;
   margin: 0 auto;
 }
 .gallery .images img {
   width: 100%;
-  height: 250px;
+  height: 200px;
   object-fit: cover;
   border-radius: 5px;
   transition: transform 0.3s;
@@ -172,21 +178,22 @@ header p {
   transform: scale(1.03);
 }
 
+/* Pricing */
 .pricing {
-  padding: 80px 20px;
+  padding: 50px 1.5rem;
   background-color: var(--light-color);
 }
 .pricing h1 {
-  font-size: 2.2rem;
-  margin-bottom: 40px;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
   text-align: center;
   color: var(--dark-color);
   font-family: "Montserrat", sans-serif;
 }
 .pricing .wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
+  grid-template-columns: 1fr;
+  gap: 20px;
   max-width: 1500px;
   margin: 0 auto;
 }
@@ -202,28 +209,30 @@ header p {
 }
 .pricing .wrapper .card img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
 }
 .pricing .wrapper .card .title {
-  padding: 25px;
+  padding: 20px;
   background: white;
 }
 .pricing .wrapper .card .title h1 {
   color: var(--primary-color);
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 10px;
+  text-align: left;
 }
 .pricing .wrapper .card .title h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--dark-color);
 }
 .pricing .wrapper .card .title p {
   color: #666;
   margin-top: 10px;
+  font-size: 0.9rem;
 }
 .pricing .wrapper .card .description {
-  padding: 25px;
+  padding: 20px;
   background: white;
 }
 .pricing .wrapper .card .description p {
@@ -243,13 +252,15 @@ header p {
   border-radius: 5px;
   font-weight: 500;
   transition: background 0.3s;
+  font-size: 0.9rem;
 }
 .pricing .wrapper .card .description a:hover {
   background: #e05555;
 }
 
+/* Contact */
 .contact {
-  min-height: 700px;
+  min-height: auto;
   background: url(/contact.jpg) rgba(41, 47, 54, 0.85);
   background-blend-mode: darken;
   background-size: cover;
@@ -257,18 +268,17 @@ header p {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 20px;
+  padding: 50px 1.5rem;
 }
 .contact form {
   background: white;
   width: 100%;
-  max-width: 600px;
-  padding: 40px;
+  padding: 25px;
   border-radius: 10px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
 }
 .contact form div {
   display: flex;
@@ -278,6 +288,7 @@ header p {
 .contact form div label {
   font-weight: 500;
   color: var(--dark-color);
+  font-size: 0.9rem;
 }
 .contact form div input {
   padding: 12px;
@@ -292,7 +303,7 @@ header p {
 }
 .contact form button {
   padding: 15px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   background: var(--primary-color);
   color: white;
@@ -305,36 +316,38 @@ header p {
   background: #e05555;
 }
 
+/* BMI Calculator */
 .bmi {
-  padding: 80px 20px;
+  padding: 50px 1.5rem;
   background: linear-gradient(45deg, var(--dark-color), #4a546c);
 }
 .bmi h1 {
-  font-size: 2.2rem;
-  margin-bottom: 40px;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
   text-align: center;
   color: var(--accent-color);
   font-family: "Montserrat", sans-serif;
 }
 .bmi .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1fr;
+  gap: 30px;
   max-width: 1500px;
   margin: 0 auto;
   color: white;
 }
 .bmi .container .wrapper img {
   width: 100%;
-  height: 100%;
+  height: 250px;
   object-fit: cover;
   border-radius: 10px;
+  order: -1;
 }
 .bmi .container .wrapper form {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  padding: 30px;
+  gap: 20px;
+  padding: 25px;
   background: rgba(255,255,255,0.1);
   border-radius: 10px;
   backdrop-filter: blur(5px);
@@ -345,7 +358,7 @@ header p {
   gap: 8px;
 }
 .bmi .container .wrapper form div label {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .bmi .container .wrapper form div input,
 .bmi .container .wrapper form div select {
@@ -361,7 +374,7 @@ header p {
 }
 .bmi .container .wrapper form button {
   padding: 15px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   background: var(--primary-color);
   color: white;
   border: none;
@@ -373,141 +386,53 @@ header p {
   background: #e05555;
 }
 
-footer {
-  padding: 30px;
-  background: var(--dark-color);
-  text-align: center;
-  color: var(--accent-color);
-  font-size: 1.1rem;
-}
-
-@media (max-width: 1050px) {
-  .hero {
-    padding-left: 2.5rem;
-  }
-  header {
-    margin-left: 2.5rem;
-  }
-  .hero .content .title {
-    font-size: 2.75rem;
-  }
-  .hero .content .sub-title p {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 880px) {
-  .hero .content .title {
-    font-size: 2.45rem;
-  }
-  .hero .content .sub-title p {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    margin-left: 1.5rem;
-    margin-top: 30px;
-    font-size: 1.2rem;
-  }
-  .hero {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  .hero .content .title {
-    font-size: 2rem;
-  }
-  .bmi .container {
-    grid-template-columns: 1fr;
-  }
-  .bmi .container .wrapper img {
-    height: 300px;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero .content .title {
-    font-size: 1.8rem;
-  }
-  .hero .content .sub-title p {
-    font-size: 1rem;
-  }
-  .hero .content .buttons {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .pricing .wrapper {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 467px) {
-  header {
-    margin-left: 1rem;
-    padding: 5px 8px;
-  }
-  .hero {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .contact form {
-    padding: 25px;
-  }
-}
-/* Body Fat Calculator Styles */
+/* Body Fat Calculator */
 .bodyfat {
-  padding: 80px 20px;
+  padding: 50px 1.5rem;
   background: linear-gradient(45deg, var(--dark-color), #3a4252);
 }
-
 .bodyfat h1 {
-  font-size: 2.2rem;
-  margin-bottom: 40px;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
   text-align: center;
   color: var(--accent-color);
   font-family: "Montserrat", sans-serif;
 }
-
 .bodyfat .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1fr;
+  gap: 30px;
   max-width: 1500px;
   margin: 0 auto;
   color: white;
 }
-
 .bodyfat .container .wrapper img {
   width: 100%;
-  height: 100%;
+  height: 250px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  order: -1;
 }
-
 .bodyfat .container .wrapper form {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  padding: 30px;
+  gap: 20px;
+  padding: 25px;
   background: rgba(255,255,255,0.1);
   border-radius: 10px;
   backdrop-filter: blur(5px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-
 .bodyfat .container .wrapper form div {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-
 .bodyfat .container .wrapper form div label {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--light-color);
 }
-
 .bodyfat .container .wrapper form div input,
 .bodyfat .container .wrapper form div select {
   padding: 12px;
@@ -518,21 +443,18 @@ footer {
   color: white;
   transition: all 0.3s ease;
 }
-
 .bodyfat .container .wrapper form div input:focus,
 .bodyfat .container .wrapper form div select:focus {
   outline: none;
   border-color: var(--secondary-color);
   box-shadow: 0 0 0 2px rgba(78, 205, 196, 0.2);
 }
-
 .bodyfat .container .wrapper form div input::placeholder {
   color: rgba(255,255,255,0.7);
 }
-
 .bodyfat .container .wrapper form button {
   padding: 15px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   background: var(--primary-color);
   color: white;
   border: none;
@@ -542,139 +464,83 @@ footer {
   font-weight: 500;
   margin-top: 10px;
 }
-
 .bodyfat .container .wrapper form button:hover {
   background: #e05555;
   transform: translateY(-2px);
 }
-
 .bodyfat .container .wrapper .result {
-  padding: 30px;
+  padding: 25px;
   background: rgba(255,255,255,0.1);
   border-radius: 10px;
   backdrop-filter: blur(5px);
 }
-
 .bodyfat .container .wrapper .result h2 {
   color: var(--accent-color);
-  margin-bottom: 20px;
-  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
 }
-
 .bodyfat .container .wrapper .result p {
   line-height: 1.8;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
-
 .bodyfat .container .wrapper .result strong {
   color: var(--secondary-color);
 }
 
-/* Responsive Styles */
-@media (max-width: 992px) {
-  .bodyfat .container {
-    gap: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .bodyfat .container {
-    grid-template-columns: 1fr;
-  }
-  
-  .bodyfat .container .wrapper img {
-    height: 300px;
-    order: -1;
-  }
-  
-  .bodyfat .container .wrapper form,
-  .bodyfat .container .wrapper .result {
-    padding: 25px;
-  }
-}
-
-@media (max-width: 576px) {
-  .bodyfat {
-    padding: 60px 15px;
-  }
-  
-  .bodyfat h1 {
-    font-size: 1.8rem;
-    margin-bottom: 30px;
-  }
-  
-  .bodyfat .container .wrapper form,
-  .bodyfat .container .wrapper .result {
-    padding: 20px;
-  }
-  
-  .bodyfat .container .wrapper .result h2 {
-    font-size: 1.5rem;
-  }
-}
-/* Calorie Calculator Styles */
+/* Calorie Calculator */
 .calorie-calculator {
-  padding: 80px 20px;
+  padding: 50px 1.5rem;
   background: linear-gradient(45deg, var(--dark-color), #3a4252);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .calorie-calculator h1 {
-  font-size: 2.2rem;
-  margin-bottom: 40px;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
   text-align: center;
   color: var(--accent-color);
   font-family: "Montserrat", sans-serif;
 }
-
 .calorie-calculator .container {
   display: flex;
   flex-direction: column;
-  max-width: 800px; /* Adjust this width as needed */
   width: 100%;
   margin: 0 auto;
   color: white;
-  gap: 40px;
+  gap: 30px;
 }
-
 .calorie-calculator .container .image-wrapper {
   width: 100%;
-  max-height: 400px;
+  max-height: 250px;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
-
 .calorie-calculator .container .wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .calorie-calculator .container .wrapper form {
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  padding: 30px;
+  gap: 20px;
+  padding: 25px;
   background: rgba(255,255,255,0.1);
   border-radius: 10px;
   backdrop-filter: blur(5px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-
 .calorie-calculator .container .wrapper form div {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-
 .calorie-calculator .container .wrapper form div label {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--light-color);
 }
-
 .calorie-calculator .container .wrapper form div input,
 .calorie-calculator .container .wrapper form div select {
   padding: 12px;
@@ -685,21 +551,18 @@ footer {
   color: white;
   transition: all 0.3s ease;
 }
-
 .calorie-calculator .container .wrapper form div input:focus,
 .calorie-calculator .container .wrapper form div select:focus {
   outline: none;
   border-color: var(--secondary-color);
   box-shadow: 0 0 0 2px rgba(78, 205, 196, 0.2);
 }
-
 .calorie-calculator .container .wrapper form div input::placeholder {
   color: rgba(255,255,255,0.7);
 }
-
 .calorie-calculator .container .wrapper form button {
   padding: 15px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   background: var(--primary-color);
   color: white;
   border: none;
@@ -709,92 +572,200 @@ footer {
   font-weight: 500;
   margin-top: 10px;
 }
-
 .calorie-calculator .container .wrapper form button:hover {
   background: #e05555;
   transform: translateY(-2px);
 }
-
 .calorie-calculator .container .wrapper .results {
-  padding: 30px;
+  padding: 25px;
   background: rgba(255,255,255,0.1);
   border-radius: 10px;
   backdrop-filter: blur(5px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
-
 .calorie-calculator .container .wrapper .results h2 {
   color: var(--accent-color);
   margin-bottom: 15px;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
-
 .calorie-calculator .container .wrapper .results h3 {
   color: var(--secondary-color);
-  margin: 20px 0 10px;
-  font-size: 1.4rem;
+  margin: 15px 0 10px;
+  font-size: 1.2rem;
 }
-
 .calorie-calculator .container .wrapper .results p {
   line-height: 1.8;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 8px;
 }
-
 .calorie-calculator .container .wrapper .results strong {
   color: var(--secondary-color);
 }
-
 .calorie-calculator .container .wrapper .results .tip {
-  margin-top: 25px;
+  margin-top: 20px;
   padding: 15px;
   background: rgba(78, 205, 196, 0.1);
   border-left: 3px solid var(--secondary-color);
   font-style: italic;
   border-radius: 0 5px 5px 0;
+  font-size: 0.9rem;
 }
 
-/* Responsive Styles */
-@media (max-width: 992px) {
-  .calorie-calculator .container {
-    max-width: 700px;
-  }
+/* Footer */
+footer {
+  padding: 25px;
+  background: var(--dark-color);
+  text-align: center;
+  color: var(--accent-color);
+  font-size: 1rem;
 }
 
-@media (max-width: 768px) {
-  .calorie-calculator .container .image-wrapper {
-    max-height: 300px;
+/* Tablet Styles */
+@media (min-width: 600px) {
+  header {
+    font-size: 1.4rem;
+    margin-left: 2.5rem;
+    margin-top: 35px;
+    padding: 8px 12px;
   }
   
-  .calorie-calculator .container .wrapper form,
-  .calorie-calculator .container .wrapper .results {
+  .hero {
+    padding-left: 2.5rem;
+  }
+  .hero .content .title {
+    font-size: 2.5rem;
+  }
+  .hero .content .sub-title p {
+    font-size: 1.3rem;
+  }
+  .hero .content .buttons {
+    flex-direction: row;
+  }
+  
+  .gallery .images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .pricing .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .bmi .container .wrapper form,
+  .bodyfat .container .wrapper form,
+  .calorie-calculator .container .wrapper form {
+    padding: 30px;
+  }
+  
+  .contact form {
+    padding: 30px;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 900px) {
+  header {
+    font-size: 1.6rem;
+    margin-left: 7rem;
+    margin-top: 45px;
+  }
+  
+  .hero {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+  .hero .content .title {
+    font-size: 3.5rem;
+  }
+  .hero .content .sub-title p {
+    font-size: 1.6rem;
+  }
+  
+  .workout_session {
+    flex-direction: row;
+    padding: 100px 7rem;
+    gap: 50px;
+  }
+  
+  .gallery {
+    padding: 80px 7rem;
+  }
+  .gallery .images {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  .gallery .images img {
+    height: 250px;
+  }
+  
+  .pricing {
+    padding: 80px 7rem;
+  }
+  .pricing .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  .pricing .wrapper .card img {
+    height: 200px;
+  }
+  .pricing .wrapper .card .title,
+  .pricing .wrapper .card .description {
     padding: 25px;
   }
+  
+  .bmi,
+  .bodyfat {
+    padding: 80px 7rem;
+  }
+  .bmi .container,
+  .bodyfat .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .bmi .container .wrapper img,
+  .bodyfat .container .wrapper img {
+    order: 0;
+    height: 100%;
+  }
+  
+  .calorie-calculator {
+    padding: 80px 7rem;
+  }
+  .calorie-calculator .container {
+    max-width: 800px;
+  }
+  .calorie-calculator .container .image-wrapper {
+    max-height: 350px;
+  }
+  
+  .contact {
+    padding: 80px 7rem;
+  }
+  .contact form {
+    max-width: 600px;
+    padding: 40px;
+  }
 }
 
-@media (max-width: 576px) {
-  .calorie-calculator {
-    padding: 60px 15px;
+/* Large Desktop Styles */
+@media (min-width: 1200px) {
+  .hero .content .title {
+    font-size: 4rem;
   }
   
-  .calorie-calculator h1 {
-    font-size: 1.8rem;
-    margin-bottom: 30px;
+  .gallery .images {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
   
-  .calorie-calculator .container .wrapper form,
-  .calorie-calculator .container .wrapper .results {
-    padding: 20px;
+  .pricing .wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
   
-  .calorie-calculator .container .wrapper .results h2 {
-    font-size: 1.5rem;
-  }
-  
-  .calorie-calculator .container .wrapper .results h3 {
-    font-size: 1.2rem;
+  .bmi .container,
+  .bodyfat .container {
+    max-width: 1500px;
   }
 }
+
 /* Image hover effect */
 .wrapper img {
   transition: transform 0.3s ease, filter 0.3s ease;
@@ -803,12 +774,4 @@ footer {
 .wrapper:hover img {
   transform: scale(1.02);
   filter: contrast(1.15) saturate(1.15);
-}
-
-/* Responsive image sizing */
-@media (max-width: 900px) {
-  .workout_session {
-    grid-template-columns: 1fr;
-    padding: 2rem 1rem;
-  }
 }
