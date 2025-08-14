@@ -14,25 +14,22 @@ const Contact = () => {
     setLoading(true);
     try {
       const { data } = await axios.post(
-        "https://mernstack-gym-website.onrender.com",
-        {
-          name,
-          email,
-          message,
-        },
-        {
-          withCredentials: true,
-          headers: { "Content-Type": "application/json" },
-        }
+        "https://mernstack-gym-website.onrender.com/send/mail", // fixed endpoint
+        { name, email, message },
+        { headers: { "Content-Type": "application/json" } } // optional: removed withCredentials
       );
+
+      // Clear form fields
       setName("");
       setEmail("");
       setMessage("");
+
+      // Show success toast
       toast.success(data.message);
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      toast.error(error.response.data.message);
+      toast.error(error.response?.data?.message || "Something went wrong!");
     }
   };
 

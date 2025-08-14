@@ -64,11 +64,25 @@ router.post("/send/mail", async (req, res, next) => {
       success: true,
       message: "Message sent and saved successfully!",
     });
+
   } catch (error) {
-    console.error(error);
+    console.error("📩 Email send error (full object):", error);
+    console.error("📩 Email send error (message):", error.message);
+    console.error("📩 Email send error (stack):", error.stack);
+
+    if (error.response) {
+      console.error("📩 SMTP server response:", error.response);
+    }
+    if (error.code) {
+      console.error("📩 SMTP error code:", error.code);
+    }
+    if (error.command) {
+      console.error("📩 SMTP command that failed:", error.command);
+    }
+
     res.status(500).json({
       success: false,
-      message: "Internal Server Error",
+      message: error.message || "Internal Server Error",
     });
   }
 });
@@ -79,3 +93,4 @@ app.use(router);
 app.listen(process.env.PORT, () => {
   console.log(`🚀 Server listening at port ${process.env.PORT}`);
 });
+
