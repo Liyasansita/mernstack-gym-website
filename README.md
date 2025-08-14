@@ -1,4 +1,4 @@
-https://drive.google.com/file/d/119JfA5KZkmFZYYVHC0OHf_Fx_lZySiL2/view?usp=sharinglive demo:
+live demo:https://drive.google.com/file/d/119JfA5KZkmFZYYVHC0OHf_Fx_lZySiL2/view?usp=sharing
 https://mernstack-gym-website-1.onrender.com/
 ![Screenshot (384)](https://github.com/user-attachments/assets/7f3a9703-5578-459a-b389-b03171dc8869)
 ![Screenshot (370)](https://github.com/user-attachments/assets/cde6b46f-71bd-4c52-8fdc-d6cb6a3840d8)
